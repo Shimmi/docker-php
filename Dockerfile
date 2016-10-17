@@ -26,6 +26,8 @@ RUN docker-php-ext-install mysqli \
 
 RUN pear install PHP_CodeSniffer
 
+VOLUME ["/srv"]
+
 WORKDIR /srv/www
 	
 EXPOSE 9000

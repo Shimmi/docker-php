@@ -20,13 +20,14 @@ RUN apt-get update && apt-get install -y \
 	git \
 	mc
 RUN docker-php-ext-install mysqli \
+	&& docker-php-ext-install pdo_mysql \
 	&& pecl install mongodb \
 	&& docker-php-ext-install zip \
 	&& docker-php-ext-enable mongodb 
 
 RUN pear install PHP_CodeSniffer
 
-VOLUME ["/srv"]
+VOLUME /srv
 
 WORKDIR /srv/www
 	

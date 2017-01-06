@@ -1,4 +1,4 @@
-FROM php:7.0-fpm
+FROM php:7.1-fpm
 
 MAINTAINER Jiří Šimeček <jirka@simecek.org>
 
@@ -13,8 +13,7 @@ RUN apt-get update && apt-get install -y \
 	libmemcached-dev \
 	wget
 
-RUN pecl install memcache \
-    && pecl install mongo \
+RUN pecl install mongodb \
     && pecl install redis \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install pdo_mysql \
@@ -23,8 +22,7 @@ RUN pecl install memcache \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-enable opcache \
-    && docker-php-ext-enable mongo \
-    && docker-php-ext-enable memcache \
+    && docker-php-ext-enable mongodb \
     && docker-php-ext-enable redis
 
 # Composer

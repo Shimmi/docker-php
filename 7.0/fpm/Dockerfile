@@ -37,9 +37,6 @@ RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
 # Add global composer bin dir to PATH
 ENV PATH /root/.composer/vendor/bin:$PATH
 
-# Default php settings
-ADD conf.d/php.ini /usr/local/etc/php/conf.d
-
 VOLUME /srv
 
 WORKDIR /srv

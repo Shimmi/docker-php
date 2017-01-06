@@ -1,0 +1,9 @@
+#!/bin/bash
+# See https://docs.docker.com/docker-cloud/builds/advanced/
+
+set -e
+
+docker tag shimmi/php:7.1-fpm 7-fpm latest
+docker tag shimmi/php:5.6-fpm 5-fpm latest
+docker push shimmi/php:5.6-fpm
+docker push shimmi/php:7.1-fpm

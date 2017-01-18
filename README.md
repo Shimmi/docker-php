@@ -13,3 +13,6 @@
 
 Based on the [Official PHP Docker image](https://store.docker.com/images/9c2c5426-0cca-4a30-a450-b2961541c6dc "official image").
 This image adds some extensions that are necessary in most common use cases for running PHP projects.
+
+## Changelog
+Please refer to the repo's Wiki to see the [changelog](https://github.com/Shimmi/docker-php/wiki/Changelog).

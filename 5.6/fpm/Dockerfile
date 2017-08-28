@@ -1,6 +1,6 @@
 FROM php:5.6-fpm
 
-MAINTAINER Jiří Šimeček <jirka@simecek.org>
+LABEL maintainer="Jiří Šimeček <jirka@simecek.org>"
 
 COPY config/php.ini /usr/local/etc/php/
 

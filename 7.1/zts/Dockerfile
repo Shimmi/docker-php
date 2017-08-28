@@ -1,6 +1,6 @@
 FROM php:7.1-zts
 
-MAINTAINER Jiří Šimeček <jirka@simecek.org>
+LABEL maintainer="Jiří Šimeček <jirka@simecek.org>"
 
 COPY config/php.ini /usr/local/etc/php/
 

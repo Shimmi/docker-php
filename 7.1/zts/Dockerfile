@@ -41,6 +41,9 @@ RUN pecl install \
 RUN git clone https://github.com/krakjoe/pthreads.git \
         && ( \
             cd pthreads \
+            # pthreads now requires PHP 7.2, ZTS in versions 7.0 and 7.1 is broken
+            # See https://github.com/amphp/parallel/issues/10
+            && git reset --hard 70040812d22798c3dd4cfc3b612bd9f56a1dc7ba \
             && phpize \
             && ./configure --enable-pthreads \
             && make -j$(nproc) \

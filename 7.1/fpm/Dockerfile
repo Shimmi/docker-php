@@ -16,8 +16,9 @@ RUN apt-get update && apt-get install -y \
     wget \
     git
 
-RUN pecl install mongodb \
-    && pecl install redis \
+RUN pecl install \
+        mongodb \
+        redis \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) \
         gd \
@@ -29,6 +30,7 @@ RUN pecl install mongodb \
         pdo_mysql \
         zip \
         sockets \
+        soap \
     && docker-php-ext-enable \
         opcache \
         mongodb \

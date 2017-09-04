@@ -30,6 +30,7 @@ RUN pecl install \
         pdo_mysql \
         zip \
         sockets \
+        soap \
     && docker-php-ext-enable \
         opcache \
         mongodb \

@@ -16,9 +16,10 @@ RUN apt-get update && apt-get install -y \
     wget \
     git
 
-RUN pecl install memcache \
-    && pecl install mongo \
-    && pecl install redis \
+RUN pecl install \
+        memcache \
+        mongo \
+        redis \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) \
         gd \

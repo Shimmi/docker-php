@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libpng12-dev \
     libssl-dev \
+    libxml2-dev \
     libmemcached-dev \
     wget \
     git

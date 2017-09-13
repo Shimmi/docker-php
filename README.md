@@ -19,8 +19,9 @@ This image adds some extensions that are necessary in most common use cases for 
 ## Changelog
 Please refer to the repo's Wiki to see the [changelog](https://github.com/Shimmi/docker-php/wiki/Changelog).
 
-## ZTS threads notice
+## PHP7.1 ZTS threads notice
 The _pthreads_ library dropped support for PHP 7.1. Due to memory leaks in PHP 7.0 and 7.1
 they started requiring PHP 7.2. The `shimmi/7.1-zts` image in version [v1.2.1](https://github.com/Shimmi/docker-php/tree/v1.2.1)
 has locked _pthreads_ to the last commit suitable for PHP 7.1. You are "required" to
-upgrade to PHP 7.2.
+upgrade to PHP 7.2. You may try the `shimmi/7.2-rc-zts`, but please note it is a release candidate
+and it shall not be used on production servers.

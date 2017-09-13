@@ -1,4 +1,4 @@
-# PHP-FPM
+# PHP fpm & zts
 ## Supported tags and respective `Dockerfile` links
 * `7.2-rc-fpm` [(7.2-rc/fpm/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.2-rc/fpm/Dockerfile)
 * `7.2-rc-zts` [(7.2-rc/zts/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.2-rc/zts/Dockerfile)

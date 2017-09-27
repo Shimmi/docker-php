@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg62-turbo-dev \
     zlib1g-dev \
     libpng-dev \
+    libpq-dev \
     libssl-dev \
     libxml2-dev \
     libmemcached-dev \
@@ -27,6 +28,7 @@ RUN pecl install \
         mysqli \
         pcntl \
         pdo_mysql \
+        pdo_pgsql  \
         zip \
         sockets \
         soap \

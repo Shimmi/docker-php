@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     zlib1g-dev \
     libpng12-dev \
+    libpq-dev \
     libssl-dev \
     libxml2-dev \
     libmemcached-dev \
@@ -29,6 +30,7 @@ RUN pecl install \
         mysqli \
         pcntl \
         pdo_mysql \
+        pdo_pgsql  \
         zip \
         sockets \
         soap \

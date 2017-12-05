@@ -1,4 +1,4 @@
-FROM php:7.2-rc-fpm
+FROM php:7.2-zts
 
 LABEL maintainer="Jiří Šimeček <jirka@simecek.org>"
 
@@ -36,6 +36,20 @@ RUN pecl install \
         opcache \
         mongodb \
         redis
+
+# Add PHP Pthreads module
+# Build from source
+# Borowed from https://github.com/bscheshirwork/multispider/blob/master/zts/Dockerfile
+RUN git clone https://github.com/krakjoe/pthreads.git \
+        && ( \
+            cd pthreads \
+            && phpize \
+            && ./configure --enable-pthreads \
+            && make -j$(nproc) \
+            && make install \
+        ) \
+        && rm -r pthreads \
+        && docker-php-ext-enable pthreads
 
 # Composer
 RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php \

@@ -1,8 +1,8 @@
 # PHP fpm & zts
 ## Supported tags and respective `Dockerfile` links
-* `7.2-rc-fpm` [(7.2-rc/fpm/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.2-rc/fpm/Dockerfile)
-* `7.2-rc-zts` [(7.2-rc/zts/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.2-rc/zts/Dockerfile)
-* `7.1-fpm`, `7-fpm`, `latest` [(7.1/fpm/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.1/fpm/Dockerfile)
+* `7.2-fpm`, `7-fpm`, `latest` [(7.2/fpm/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.2/fpm/Dockerfile)
+* `7.2-zts` [(7.2/zts/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.2/zts/Dockerfile)
+* `7.1-fpm` [(7.1/fpm/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.1/fpm/Dockerfile)
 * `7.1-zts` [(7.1/zts/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/7.1/zts/Dockerfile)
 * `5.6-fpm`, `5-fpm` [(5.6/fpm/Dockerfile)](https://github.com/Shimmi/docker-php/blob/master/5.6/fpm/Dockerfile)
 
@@ -23,5 +23,4 @@ Please refer to the repo's Wiki to see the [changelog](https://github.com/Shimmi
 The _pthreads_ library dropped support for PHP 7.1. Due to memory leaks in PHP 7.0 and 7.1
 they started requiring PHP 7.2. The `shimmi/7.1-zts` image since version [v1.2.1](https://github.com/Shimmi/docker-php/tree/v1.2.1)
 has locked _pthreads_ to the last commit suitable for PHP 7.1. You are "required" to
-upgrade to PHP 7.2. You may try the `shimmi/7.2-rc-zts`, but please note it is a release candidate
-and it shall not be used on production servers.
+upgrade to PHP 7.2. Please use the `shimmi/7.2-zts`.
